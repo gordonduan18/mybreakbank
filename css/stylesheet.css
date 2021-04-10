@@ -1,0 +1,598 @@
+/* Include the padding and border in an element's total width and height */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* Remove margins and padding from the list */
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Style the button */
+
+button {
+    color: white;
+}
+
+
+/* Style the list items */
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Set all odd list items to a different color (zebra-stripes) */
+
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+
+/* Darker background-color on hover */
+
+ul li:hover {
+    background: #ddd;
+}
+
+
+/* When clicked on, add a background color and strike out text */
+
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+
+/* Add a "checked" mark when clicked on */
+
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+/* Style the footer */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #53BA83;
+  color: white;
+}
+
+
+/* Style the close button */
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+
+/* Style the header */
+
+.header {
+    /* background-color: #f44336; */
+    font-family: 'Open Sans', sans-serif;
+    padding: 30px 40px;
+    color: black;
+    text-align: left;
+}
+
+h2.header {
+    margin-bottom: 100px;
+}
+
+
+/* Clear floats after the header */
+
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Style the input */
+
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+/* Style the sign-in div*/
+.signinDiv {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/* Style the sign in form */
+.signinForm {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+/*    border-color: black;
+border-style: solid;*/
+}
+
+/* Style the sign-in input */
+
+.signin {
+    width: 30%;
+    margin: 1em;
+}
+
+/* Style the "sign-in" button */
+
+.signinBtn {
+    width: 10%;
+    background: #095169;
+    font-family: Open Sans;
+    font-style: normal;
+    color: white;
+    font-weight: 400;
+    font-size: 1vw;
+    margin: 1em;
+    padding: 0.5em 0.5em;
+    border: none;
+    color: white;
+}
+
+.signinBtn:hover {
+    background-color: #043A4D;
+}
+
+/* Style the "register" button */
+.registerBtn {
+    width: 10%;
+    background: #095169;
+    font-family: Open Sans;
+    font-style: normal;
+    color: white;
+    font-weight: 400;
+    font-size: 1vw;
+    margin: 1em;
+    padding: 0.5em 0.5em;
+    border: none;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.registerBtn:hover {
+    background-color: #043A4D;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+/* Style the "sign-out" button */
+
+.signoutBtn {
+    width: 10em;
+    background: #095169;
+    font-family: Open Sans;
+    font-style: normal;
+    color: white;
+    font-weight: 400;
+    font-size: 1vw;
+    margin: 1em;
+    padding: 0.5em 0.5em;
+    border: none;
+    color: white;
+}
+
+.signoutBtn:hover {
+    background-color: #043A4D;
+}
+
+/* Style the "Add" button */
+
+.addBtn {
+    font-family: 'Open Sans', sans-serif;
+    padding: 12px 0;
+    margin: 0;
+    width: 25%;
+    background: #53BA83;
+    color: white;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+.addBtn:hover {
+    background-color: #2FA264;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.to-do-list {
+    margin: 100px auto;
+    margin-bottom: 30px;
+    border: 3px solid #53BA83;
+    width: 50%;
+}
+
+.flex-container {
+    display: flex;
+    background-color: #53BA83;
+    padding: 50px 0px;
+}
+
+.flex-child {
+    flex: 1;
+    /* border: 2px solid yellow; */
+}
+
+.timer {
+    padding-right: 50px;
+    text-align: right;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    color: white;
+}
+
+.name {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 87px;
+    padding-left: 50px;
+    margin: auto;
+    color: white;
+}
+
+.recommendation {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 87px;
+    padding-right: 40px;
+    margin: auto;
+    color: white;
+    text-align: right;
+}
+
+/* Style the signup modal form*/
+.modal-signup {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.modal-signup input {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 1em;
+}
+
+.circle-small-task {
+    width: 46px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #9FD86B;
+    text-align: center;
+    color: white;
+    float: left;
+    margin-right: 20px;
+}
+
+.circle-medium-task {
+    width: 46px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #53BA83;
+    text-align: center;
+    color: white;
+    float: left;
+    margin-right: 20px;
+}
+
+.circle-large-task {
+    width: 46px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #059B9A;
+    text-align: center;
+    color: white;
+    float: left;
+    margin-right: 20px;
+}
+
+.circle-custom-task {
+    width: 46px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #095169;
+    text-align: center;
+    color: white;
+    float: left;
+    margin-right: 20px;
+}
+
+#timer {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 87px;
+    letter-spacing: 0.1em;
+    color: white;
+}
+
+#pause {
+    background: #095169;
+    font-family: Open Sans;
+    font-style: normal;
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+    padding: 10px 30px;
+    line-height: 33px;
+    border: none;
+    /* identical to box height */
+    color: white;
+}
+
+#pause:hover {
+    background-color: #043A4D;
+}
+
+#run {
+    background: #53BA83;
+    color: white;
+    padding: 10px 30px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    /* identical to box height */
+    color: white;
+    border: none;
+}
+
+#run:hover {
+    background-color: #2FA264;
+}
+
+div.name>img {
+    float: left;
+    width: 100px;
+    height: auto;
+    padding-right: 20px;
+}
+
+p.name {
+    padding-left: 100px;
+}
+
+.btn-small-dft {
+    background-color: #9FD86B;
+}
+
+.btn-small-dft:hover {
+    background-color: #86C849;
+}
+
+.btn-medium-dft {
+    background-color: #53BA83;
+}
+
+.btn-medium-dft:hover {
+    background-color: #2FA164;
+}
+
+.btn-large-dft {
+    background-color: #059B9A;
+}
+
+.btn-large-dft:hover {
+    background-color: #018988;
+}
+
+.buttons-div {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    /* padding: 100px 300px; */
+    /* height: 350px; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* just for demo */
+    /* min-width: 612px; */
+}
+
+.box1,
+.box2,
+.box3,
+.box4 {
+    width: 300px;
+    height: 300px;
+    vertical-align: top;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 300px;
+    font-size: 35px;
+    color: white;
+}
+
+.box5,
+.box6,
+.box7,
+.box8 {
+    width: 300px;
+    height: 300px;
+    vertical-align: top;
+    display: inline-block;
+    *display: inline;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 300px;
+    zoom: 1;
+    color: white;
+    font-size: 35px;
+}
+
+.stretch {
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0
+}
+
+.box1 {
+    background: #2BA24C;
+}
+
+.box1:hover {
+    background: #80C794;
+}
+
+.box2 {
+    background: #E43E2B;
+}
+
+.box2:hover {
+    background: #EF8B80;
+}
+
+.box3 {
+    background: #FF3F18;
+}
+
+.box3:hover {
+    background: #FF8C74;
+}
+
+.box4 {
+    background: #00A2F3;
+}
+
+.box4:hover {
+    background: #66C7F8;
+}
+
+.box5 {
+    background: #3F5E9D;
+}
+
+.box5:hover {
+    background: #8C9EC4;
+}
+
+.box6 {
+    background: #FF4277;
+}
+
+.box6:hover {
+    background: #FF8EAE;
+}
+
+.box7 {
+    background: #B10006;
+}
+
+.box7:hover {
+    background: #D0666A;
+}
+
+.box8 {
+    background: #010101;
+}
+
+.box8:hover {
+    background: #676767;
+}
+
+.btn-start-dft {
+    background: #53BA83;
+    color: white;
+    padding: 10px 30px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    margin: 0 auto;
+    /* identical to box height */
+    color: white;
+    border: none;
+}
+
+.btn-start-dft:hover {
+    background-color: #2FA264;
+}
+
+.btn-custom-dft {
+    background-color: #095169;
+}
+
+#myInput {
+    border: 2px solid black;
+}
+
+.recommendation-container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 65px auto;
+}
